@@ -1,8 +1,8 @@
 // config.js
 const CONFIG = {
-    // Agora apontamos para a nossa rota interna do Netlify que criamos no netlify.toml
+    // Aponte para a sua função proxy no Netlify! 
     BASE_URL: "/.netlify/functions/chat", 
-    MODEL: "google/gemini-2.5-flash"
+    MODEL: "google/gemini-2.5-flash" // ou o modelo que estiver usando
 };
 
 export default CONFIG;
