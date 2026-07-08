@@ -30,12 +30,15 @@ exports.handler = async function (event, context) {
                 "X-Title": "Concessionaria Francisco IA"
             },
             body: JSON.stringify({
-                model: body.model || "google/gemini-2.5-flash",
+                // Adicionamos um modelo gratuito de fallback
+                model: body.model || "meta-llama/llama-3.1-8b-instruct:free", 
                 messages: body.messages,
-                temperature: 0.7
+                temperature: 0.7,
+                // NOVA LINHA: Limita a resposta para evitar estouro de limite gratuito
+                max_tokens: 1500 
             })
         });
-
+       
         const data = await response.json();
 
         // AQUI ESTAVA O BUG: antes sempre retornava 200, mesmo quando a
