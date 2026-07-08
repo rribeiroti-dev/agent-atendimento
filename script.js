@@ -35,6 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
             });
 
+            // NOVA VALIDAÇÃO: Se o servidor (Netlify ou OpenRouter) der erro, paramos aqui
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                console.error("Erro retornado do Proxy/OpenRouter:", errorData);
+                throw new Error(errorData.error || `Erro ${response.status} na comunicação.`);
+            }
+
             const data = await response.json();
             typingIndicator.remove();
 
@@ -43,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 appendMessage(botReply, "bot");
                 chatHistory.push({ role: "assistant", content: botReply });
             } else {
-                throw new Error("Resposta inválida do servidor proxy.");
+                throw new Error("Resposta em formato inesperado do servidor proxy.");
             }
 
         } catch (error) {
