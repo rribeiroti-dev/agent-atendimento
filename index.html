@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Automotiva - Francisco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="brand-sidebar">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Logo Concessionária" class="logo">
+            </div>
+            <div class="brand-info">
+                <h1>Atendimento Consultivo</h1>
+                <p>Encontre o veículo perfeito para o seu momento de vida com a orientação do nosso especialista.</p>
+            </div>
+            <div class="features-list">
+                <div class="feature-item">
+                    <i class="fa-solid fa-car-side"></i>
+                    <span>Novos e Seminovos</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Financiamento & Consórcio</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Avaliação Segura</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="chat-container">
+            <div class="chat-header">
+                <div class="bot-profile">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="bot-status">
+                        <h2>Francisco</h2>
+                        <span class="status-online"><span class="dot"></span> Consultor Especialista</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    Olá! Seja muito bem-vindo. Sou o Francisco, seu consultor automotivo. É um grande prazer receber você aqui! 
+                    <br><br>
+                    Estou aqui para ajudar você a encontrar o veículo ideal para as suas necessidades, sem pressa e com total transparência. Para começarmos, me conte um pouco: que tipo de veículo você está buscando ou qual será o uso principal dele no seu dia a dia?
+                </div>
+            </div>
+
+            <form class="chat-input-area" id="chat-form">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem aqui..." autocomplete="off" required>
+                <button type="submit" id="send-btn" aria-label="Enviar mensagem">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
