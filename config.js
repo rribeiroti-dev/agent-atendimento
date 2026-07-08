@@ -1,8 +1,8 @@
 // config.js
 const CONFIG = {
-    // Aponte para a sua função proxy no Netlify! 
     BASE_URL: "/.netlify/functions/chat", 
-    MODEL: "google/gemini-2.5-flash" // ou o modelo que estiver usando
+    // Utilizamos um modelo que é garantido como 100% gratuito pela OpenRouter
+    MODEL: "meta-llama/llama-3.1-8b-instruct:free" 
 };
 
 export default CONFIG;
